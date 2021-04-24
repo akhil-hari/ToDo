@@ -53,7 +53,7 @@ function load_list(){
 function checkbox_change(){
     document.querySelector("#pending").innerHTML=String(full-document.querySelectorAll('.task:checked').length);
     if((document.querySelectorAll('.task:checked').length-countg)==5){
-        bootbox.alert({message:"<span style='position:relative;left:20px;top:15px;border-radius:50%;float:left'><img height='160px' width='160px' src='./res/tenor3.gif' style='border-radius:50%;float:left'></img><h1 style='color:rgba(102,113,134,255);position:relative;left:-60px;top:60px;float:right;margin-left:30px'>Congratz.!</h1><small style='color:rgb(244,180,100);position:relative;top:60px;left:20px;white-space:nowrap'>you have compleated 5 tasks today.</small></span>",centerVertical:true});
+        bootbox.alert({message:"<span style='position:relative;left:20px;top:15px;border-radius:50%;float:left'><img height='160px' width='160px' src='./res/tenor3.gif' style='border-radius:50%;float:left'></img><h1 style='color:rgba(102,113,134,255);position:relative;left:-60px;top:60px;float:right;margin-left:30px'>Congrats.!</h1><small style='color:rgb(244,180,100);position:relative;top:60px;left:20px;white-space:nowrap'>5 Tasks have been Successfully Completed</small></span>",centerVertical:true});
     }    
 };
 
