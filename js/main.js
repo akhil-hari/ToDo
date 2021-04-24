@@ -5,12 +5,16 @@ function load_list(){
     let res=new XMLHttpRequest();
     res.onreadystatechange=function(){
         if(this.readyState==4 && this.status==200){
-            console.log(this.readyState);
+           
+            // console.log(this.readyState);
             let e=document.getElementById("todo-list");
             e.innerHTML="";
             todo_list=JSON.parse(res.responseText);
             let count=0;
+            let fullc=0;
             todo_list.forEach(i => {
+
+                fullc+=1;
                 if(i['completed']==true){
                     count+=1;
                 }
@@ -20,14 +24,16 @@ function load_list(){
                 temp.style.alignItems="centre";
                 temp.innerHTML=`
                     <td style="text-align:center;">${i['id']}</td>
-                    <td style="text-align:center;">${i['title']}</td>
-                    <td><input class="task" type="checkbox" onchange="checkbox_change()" ${i['completed']?'checked="checked" disabled="disabled"':''}>
+                    <td style="position:relative;left:30px">${i['title']}</td>
+                    <td><input class="task" style="position:relative;left:30px" type="checkbox" onchange="checkbox_change()" ${i['completed']?'checked="checked" disabled="disabled"':''}>
                     </td>
                     `;
                 e.appendChild(temp);
             });
 
         countg=count;
+        full=fullc;
+        document.querySelector("#pending").innerHTML=String(full-document.querySelectorAll('.task:checked').length);
 
         }
         else{
@@ -43,7 +49,9 @@ function load_list(){
 // load_list();
 // setInterval(load_list,60000);
 
+
 function checkbox_change(){
+    document.querySelector("#pending").innerHTML=String(full-document.querySelectorAll('.task:checked').length);
     if((document.querySelectorAll('.task:checked').length-countg)==5){
         bootbox.alert({message:"<span style='position:relative;left:20px;top:15px;border-radius:50%;float:left'><img height='160px' width='160px' src='./res/tenor3.gif' style='border-radius:50%;float:left'></img><h1 style='color:rgba(102,113,134,255);position:relative;left:-60px;top:60px;float:right;margin-left:30px'>Congratz.!</h1><small style='color:rgb(244,180,100);position:relative;top:60px;left:20px;white-space:nowrap'>you have compleated 5 tasks today.</small></span>",centerVertical:true});
     }    
