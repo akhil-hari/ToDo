@@ -1,0 +1,72 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.login label{
+    margin-right:50px; 
+}
+#todo{
+    /* overflow-y: visible; */
+    padding:80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin:10%;
+    margin-top: 8%;
+    height: 75vh;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    /* scrollbar-width: 0px; */
+    /* margin-right:5%; */
+}
+
+
+#todo table thead tr th{
+    position: sticky;
+    top:0px;
+    background-color: white;
+}
+
+.input-box{
+    /* border:1px solid black; */
+    height: 35px;
+    margin: 20px;
+    margin-bottom: 0px;
+    border-radius: 35px;
+    background-color:rgba(82,82,82,255);
+
+}
+.input-box input{
+    position: absolute;
+    border: 1px dotted rgba(82,82,82,255);
+    height: 35px;
+    width:16%;
+    left:45%;
+
+}
+.input-box label{
+    position:relative;
+    color: white;
+    top:9px;
+    /* left:10px; */
+    right:-10px;
+}
+
+#login{
+    border:none;
+    color:white;
+    margin-left:42%;
+    margin-top: 20px;
+    border-radius:30px;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(82,82,82,255);
+}
+.input-box input:focus{
+    outline:none;
+}
+
