@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 </head>
-<body style="background-image: url(./res/WallpaperDog-11027737.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom right;">
+<body style="background-image: url(./res/WallpaperDog-11027737.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom right;" onload="load_list()">
     <ul class="nav nav-pills justify-content-center" style="background-color: whitesmoke;padding:5px">
         <a class="navbar-brand" href="#" style="position: absolute;left:10px;">
             <img src="./res/brand.png" width="40" height="40" alt="">ToDo
@@ -18,26 +18,29 @@
           <a class="nav-link active" href="#">To-do</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html">LogOut</a>
+          <a class="nav-link" href="./">LogOut</a>
         </li>
        
       </ul>
     <div style="border: 2px solid gray;background-color: white;" id="todo">
         <div style="height: 100%; overflow-y: auto;">
-        <table style="width: 100%;position:sticky;top:0px;height: 50px;background-color: white;z-index: 2;outline: 1px solid black;">
-            
-                <tr>
-                    <th style="text-align:center;">no</th>
-                    <th style="text-align:center;">Task</th>
-                    <th style="text-align:center;"> status</th>
-                </tr>
-            </table>
-         <div style="position:relative;overflow-y: auto;">
-            <table id="todo-list" style=" width: 100%;">
+        <table style="width: 100%;">
+            <thead style="position:sticky;top:0px;width: 100%;height: 50px;background-color: white;z-index: 2;"> 
+              <tr>
+                <th style="text-align:center;">no</th>
+                <th style="text-align:center;">Task</th>
+                <th style="text-align:center;"> status</th>
+            </tr>
+        
+
+            </thead>
+              
+         
+            <tbody id="todo-list" style=" width: 100%;">
                 
             
-            </table>
-         </div>   
+            </tbody>
+         
        
       
        
